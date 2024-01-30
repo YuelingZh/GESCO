@@ -145,7 +145,8 @@ class ImageDataset(Dataset):
             with bf.BlobFile(instance_path, "rb") as f:
                 pil_instance = Image.open(f)
                 pil_instance.load()
-            pil_instance = pil_instance.convert("L")
+            #pil_instance = pil_instance.convert("L")
+            pil_instance = pil_instance
         else:
             pil_instance = None
 
